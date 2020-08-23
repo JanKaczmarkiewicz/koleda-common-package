@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "target": "es6",
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "declaration": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+
+    "jsx": "react",
+    "typeRoots": ["index.d.ts", "node_modules/@types"]
+  }
+}
