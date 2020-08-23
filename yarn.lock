@@ -119,10 +119,10 @@
     ts-node "^8"
     tslib "^1"
 
-"@koleda/common-utils@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@koleda/common-utils/-/common-utils-1.0.1.tgz#bdd7df4989f164776683ff84c9b99c518c6ba24f"
-  integrity sha512-XUu0KaPUGRz4EPMCcisxGLKSTxIaM29SSMye8gs8r/MeaC8+O7/94uW7O1J0HeP2caeerLtBLxMWtOgw9SJLwg==
+"@koleda/common-utils@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@koleda/common-utils/-/common-utils-1.0.3.tgz#17d933961ed8545229fe6025c535f7b5fcb2d19b"
+  integrity sha512-e6VdZnWJQ4Tl0cQFdM0A7ao41UjWkJBhsQFJTQqte7NtxnPw/2ikCMc5ZtO7wU0ARbSUPXNX/EI5Ji0QhUXFUw==
   dependencies:
     "@react-native-community/async-storage" "^1.12.0"
     react "^16.13.1"
