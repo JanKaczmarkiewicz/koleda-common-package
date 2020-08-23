@@ -1,10 +1,11 @@
 {
-  "name": "@koleda/context-common",
+  "name": "@koleda/common-context",
   "version": "1.0.2",
   "main": "dist/index.js",
   "typings": "dist/index.ts",
   "scripts": {
-    "prepublish": "tsc"
+    "prepub": "tsc",
+    "pub": "yarn publish --access public"
   },
   "devDependencies": {
     "@types/node": "^14.6.0",
