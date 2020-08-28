@@ -1,9 +1,2 @@
-export { sortByHouseNumber } from "./utils/sortByHouseNumber";
-export { splitByLabel } from "./utils/splitByLabel";
-export { storage } from "./utils/storage";
-export { createContext } from "./utils/createContext";
-export { difference } from "./utils/difference"
-export { getCurrentTime } from "./utils/getCurrentTime"
-export { stringToColour } from "./utils/stringToColour"
-export { shorterStreetName } from "./utils/shorterStreetName"
-export { isSameDate } from "./utils/isSameDate"
+export * as utils from "./utils";
+export * as context from "./context";

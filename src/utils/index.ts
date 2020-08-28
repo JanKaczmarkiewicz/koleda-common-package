@@ -1,0 +1,9 @@
+export { sortByHouseNumber } from "./sortByHouseNumber";
+export { splitByLabel } from "./splitByLabel";
+export { storage } from "./storage";
+export { createContext } from "./createContext";
+export { difference } from "./difference"
+export { getCurrentTime } from "./getCurrentTime"
+export { stringToColour } from "./stringToColour"
+export { shorterStreetName } from "./shorterStreetName"
+export { isSameDate } from "./isSameDate"
