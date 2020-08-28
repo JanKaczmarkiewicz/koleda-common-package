@@ -1,4 +1,4 @@
-export default () =>
+export const getCurrentTime = () =>
   new Date()
     .toISOString()
     .split(":")
