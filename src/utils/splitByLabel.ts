@@ -1,10 +1,10 @@
-export type SplitedWithoutIndex<T> = { [key: string]: T[] };
+export type Splited<T> = { [key: string]: T[] };
 
 export function splitByLabel<T>(
   items: T[],
-  condition: (item: T) => string | undefined
+  condition: (item: T) => string | undefined,
 ) {
-  const splited: SplitedWithoutIndex<T> = {};
+  const splited: Splited<T> = {};
   for (const item of items) {
     const key = condition(item);
     if (!key) continue;
