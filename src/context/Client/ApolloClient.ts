@@ -1,11 +1,18 @@
-import { ApolloClient, InMemoryCache } from "@apollo/client";
+import { ApolloClient, InMemoryCache, split } from "@apollo/client";
 
 import { setContext } from "@apollo/client/link/context";
 import { createHttpLink } from "@apollo/react-hooks";
 import { storage } from "@koleda/common-utils";
+import { WebSocketLink } from '@apollo/client/link/ws';
+import { getMainDefinition } from "@apollo/client/utilities";
+
+const backendIp = "localhost"
+const backendPort = "3001"
+
+const backendSocket = `${backendIp}:${backendPort}`
 
 const httpLink = createHttpLink({
-  uri: "http://localhost:3001",
+  uri: `http://${backendSocket}/`,
 });
 
 const authLink = setContext(async (_, { headers }) => {
@@ -13,10 +20,11 @@ const authLink = setContext(async (_, { headers }) => {
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : "",
+      authorization: token ? `Bearer ${token}` : null,
     },
   };
 });
+
 
 export const client = new ApolloClient({
   cache: new InMemoryCache(),
