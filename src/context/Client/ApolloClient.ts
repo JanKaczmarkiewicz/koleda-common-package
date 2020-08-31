@@ -6,12 +6,17 @@ import { storage } from "@koleda/common-utils";
 import { WebSocketLink } from '@apollo/client/link/ws';
 import { getMainDefinition } from "@apollo/client/utilities";
 
+const backendIp = "localhost"
+const backendPort = "3001"
+
+const backendSocket = `${backendIp}:${backendPort}`
+
 const httpLink = createHttpLink({
-  uri: "http://localhost:3001",
+  uri: `http://${backendSocket}/`,
 });
 
 const wsLink = new WebSocketLink({
-  uri: `ws://localhost:5000/`,
+  uri: `ws://${backendSocket}/`,
   options: {
     reconnect: true
   }
