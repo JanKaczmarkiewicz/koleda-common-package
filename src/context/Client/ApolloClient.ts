@@ -13,6 +13,7 @@ const httpLink = createHttpLink({
   uri: `http://${backendSocket}/`,
 });
 
+
 const authLink = setContext(async (_, { headers }) => {
   const token = await storage.getItem("token");
   return {
