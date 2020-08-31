@@ -15,13 +15,6 @@ const httpLink = createHttpLink({
   uri: `http://${backendSocket}/`,
 });
 
-const wsLink = new WebSocketLink({
-  uri: `ws://${backendSocket}/`,
-  options: {
-    reconnect: true
-  }
-});
-
 const authLink = setContext(async (_, { headers }) => {
   const token = await storage.getItem("token");
   return {
@@ -32,20 +25,8 @@ const authLink = setContext(async (_, { headers }) => {
   };
 });
 
-const splitLink = split(
-  ({ query }) => {
-    const definition = getMainDefinition(query);
-    return (
-      definition.kind === 'OperationDefinition' &&
-      definition.operation === 'subscription'
-    );
-  },
-  wsLink,
-  httpLink,
-);
-
 
 export const client = new ApolloClient({
   cache: new InMemoryCache(),
-  link: authLink.concat(splitLink),
+  link: authLink.concat(httpLink),
 });
