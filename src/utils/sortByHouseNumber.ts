@@ -1,9 +1,4 @@
-const matchLetters = /\D/g;
-
-export const parseHouseNumber = (houseNumber: string): number => {
-  const withoutLetters = houseNumber.replace(matchLetters, "");
-  return Number.parseInt(withoutLetters, 10);
-};
+import { parseHouseNumber } from "@koleda/common-utils/dist/utils/sortByHouseNumber";
 
 export const sortByHouseNumber = <T>(
   items: T[],
