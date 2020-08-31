@@ -3,8 +3,6 @@ import { ApolloClient, InMemoryCache, split } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 import { createHttpLink } from "@apollo/react-hooks";
 import { storage } from "@koleda/common-utils";
-import { WebSocketLink } from '@apollo/client/link/ws';
-import { getMainDefinition } from "@apollo/client/utilities";
 
 const backendIp = "localhost"
 const backendPort = "3001"
