@@ -1,12 +1,13 @@
 {
   "name": "@koleda/common",
-  "version": "2.3.6",
+  "version": "2.4.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
   "scripts": {
     "prepub": "tsc",
-    "pub": "yarn publish --access public"
+    "pub": "yarn publish --access public",
+    "gen": "apollo codegen:generate --excludes=node_modules/* --includes=**/*.tsx --endpoint http://localhost:3001 --target typescript --tagName gql --outputFlat src/generated --no-addTypename"
   },
   "devDependencies": {
     "@types/node": "^14.6.0",
