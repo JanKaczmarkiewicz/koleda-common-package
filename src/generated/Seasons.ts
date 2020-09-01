@@ -4,14 +4,14 @@
 // This file was automatically generated and should not be edited.
 
 // ====================================================
-// GraphQL query operation: AcolytePastoralVisits
+// GraphQL query operation: Seasons
 // ====================================================
 
-export interface AcolytePastoralVisits_pastoralVisits {
+export interface Seasons_seasons {
   id: string;
-  hour: string;
+  year: number;
 }
 
-export interface AcolytePastoralVisits {
-  pastoralVisits: AcolytePastoralVisits_pastoralVisits[];
+export interface Seasons {
+  seasons: Seasons_seasons[];
 }

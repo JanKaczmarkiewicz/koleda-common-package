@@ -5,7 +5,7 @@ import { useMutation, useLazyQuery } from "@apollo/react-hooks";
 import { Me } from "../../generated/Me";
 import { Login } from "../../generated/Login";
 import { authReducer, ActionType } from "./AuthReducer";
-import { storage } from "@koleda/common-utils";
+import { storage } from "../../utils";
 
 interface Props {
   children: React.ReactNode;

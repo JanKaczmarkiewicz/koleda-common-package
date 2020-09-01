@@ -1,4 +1,4 @@
-import { parseHouseNumber } from "@koleda/common-utils/dist/utils/sortByHouseNumber";
+import { houseNumberToValue } from "./houseNumberToValue";
 
 export const sortByHouseNumber = <T>(
   items: T[],
@@ -10,8 +10,8 @@ export const sortByHouseNumber = <T>(
 
     if (!firstNumber || !secondNumber) return 0;
 
-    const firstValue = parseHouseNumber(firstNumber);
-    const secondValue = parseHouseNumber(secondNumber);
+    const firstValue = houseNumberToValue(firstNumber);
+    const secondValue = houseNumberToValue(secondNumber);
 
     if (Number.isNaN(firstValue) || Number.isNaN(secondValue)) return 0;
 

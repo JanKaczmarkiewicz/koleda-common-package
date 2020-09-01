@@ -7,21 +7,10 @@
 // START Enums and Input Objects
 //==============================================================
 
-export enum RecordState {
-  ACCEPTED = "ACCEPTED",
-  REJECTED = "REJECTED",
-  UNCERTAIN = "UNCERTAIN",
-  UNKNOWN = "UNKNOWN",
-}
-
 export enum Role {
   ACOLYTE = "ACOLYTE",
   ADMIN = "ADMIN",
   PRIEST = "PRIEST",
-}
-
-export interface FindOneInput {
-  id: string;
 }
 
 export interface LoginInput {

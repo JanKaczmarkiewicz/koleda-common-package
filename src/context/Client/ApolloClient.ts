@@ -1,8 +1,8 @@
-import { ApolloClient, InMemoryCache, split } from "@apollo/client";
+import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 import { setContext } from "@apollo/client/link/context";
 import { createHttpLink } from "@apollo/react-hooks";
-import { storage } from "@koleda/common-utils";
+import { storage } from "../../utils/storage";
 
 const backendIp = "localhost"
 const backendPort = "3001"

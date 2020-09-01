@@ -6,4 +6,4 @@ import AsyncStorage from '@react-native-community/async-storage';
 
 const storage = AsyncStorage
 
-export {storage};
+export { storage };
