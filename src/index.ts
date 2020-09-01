@@ -1,2 +1,2 @@
-export * as utils from "./utils";
-export * as context from "./context";
+export * from "./utils";
+export * from "./context";
