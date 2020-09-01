@@ -1,10 +1,6 @@
 {
   "name": "@koleda/common",
-<<<<<<< HEAD
-  "version": "2.3.4",
-=======
-  "version": "2.3.3",
->>>>>>> 0e3574dc81ab9e4e773da338ab26a5549dcd878d
+  "version": "2.3.6",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
