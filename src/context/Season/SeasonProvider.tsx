@@ -20,8 +20,8 @@ const SEASONS = gql`
 const SeasonProvider: React.FC<Props> = ({ children }) => {
   const { loading, error, data } = useQuery<Seasons>(SEASONS);
 
-  if (loading) return <div>loading...</div>;
-  if (error || !data || !data.seasons) return <div>error</div>;
+  if (loading) return null;
+  if (error || !data || !data.seasons) null
 
   const latestSeason = data.seasons.reduce((latestSeason, season) =>
     latestSeason.year > season.year ? latestSeason : season
