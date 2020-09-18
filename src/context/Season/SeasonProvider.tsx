@@ -21,7 +21,7 @@ const SeasonProvider: React.FC<Props> = ({ children }) => {
   const { loading, error, data } = useQuery<Seasons>(SEASONS);
 
   if (loading) return null;
-  if (error || !data || !data.seasons) null
+  if (error || !data || !data.seasons) null;
 
   const latestSeason = data.seasons.reduce((latestSeason, season) =>
     latestSeason.year > season.year ? latestSeason : season

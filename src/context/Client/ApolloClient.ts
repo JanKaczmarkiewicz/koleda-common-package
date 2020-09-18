@@ -4,15 +4,14 @@ import { setContext } from "@apollo/client/link/context";
 import { createHttpLink } from "@apollo/react-hooks";
 import { storage } from "../../utils/storage";
 
-const backendIp = "localhost"
-const backendPort = "3001"
+const backendIp = "localhost";
+const backendPort = "3001";
 
-const backendSocket = `${backendIp}:${backendPort}`
+const backendSocket = `${backendIp}:${backendPort}`;
 
 const httpLink = createHttpLink({
   uri: `http://${backendSocket}/`,
 });
-
 
 const authLink = setContext(async (_, { headers }) => {
   const token = await storage.getItem("token");
@@ -23,7 +22,6 @@ const authLink = setContext(async (_, { headers }) => {
     },
   };
 });
-
 
 export const client = new ApolloClient({
   cache: new InMemoryCache(),
